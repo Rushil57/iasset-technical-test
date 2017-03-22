@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "iAsset Technical Test";
+}
+@model iasset_technical_test.Models.HomeViewModels
+<h4>Weather Web Service Demo</h4>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<link href="~/Content/toastr.min.css" rel="stylesheet" />
+<script src="~/Scripts/toastr.js"></script>
+<div class="login-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                @using (Html.BeginForm("frmiAssetTechnical", "Home", FormMethod.Post))
+                {
+                    <span></span>
+                    <div class="form-group">
+                        <label>Country</label>
+                        @Html.TextBoxFor(m => m.Country, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <select id="sltCity" class="form-control">
+                          <option>-- Select City --</option>
+                        </select>
+                    </div>
+
+                    <div class="clearfix"></div>
+                }
+            </div>
+            
+        </div>
+        <div id="dvWeatherConditions" style="display:none">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Location:</b> <label id="lblLocation">West</label>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Time:</b> <label id="lblTime">07:32 AM</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Wind:</b> <label id="lblWind">Fast</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Visibility:</b> <label id="lblVisibility">Normal</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Sky conditions:</b> <label id="lblSkyConditions">Cloudy</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Temperature:</b> <label id="lblTemperature">32 C</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Dew Point:</b> <label id="lblDewPoint">21</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Relative Humidity:</b> <label id="lblRelativeHumidity">Normal</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <b>Pressure:</b> <label id="lblPressure">Above average</label>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var getCitiesURL = '@Url.Action("GetCities","Home")';
+    $("#Country").on("blur", function () {
+        $("#dvWeatherConditions").hide();
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({ country: $(this).val() }),
+            url: getCitiesURL,
+            success: function (dataResponse) {
+                if (dataResponse.cities.length > 0) {
+                    $('#sltCity').empty();
+                    $('#sltCity').append('<option>-- Select City --</option>');
+                    for (var i = 0; i < dataResponse.cities.length; i++) {
+                        $("#sltCity").append('<option>' + dataResponse.cities[i] + '</option>');
+                    }
+                    toastr.success('Cities populated successfully!');
+                }
+                else {
+                    toastr.error('No cities found!');
+                }
+            }
+
+        })
+    })
+    $("#sltCity").on("change", function () {
+        $("#dvWeatherConditions").show();
+    })
+</script>

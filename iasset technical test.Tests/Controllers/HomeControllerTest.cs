@@ -27,13 +27,13 @@ namespace iasset_technical_test.Tests.Controllers
             Assert.IsNotNull(result);
         }
         [TestMethod]
-        public void Test()
+        public void GetCities()
         {
             string cityName = "Australia";
             // Arrange
             HomeController controller = new HomeController();
             var weatherData = new Mock<IWeatherData>();
-            var cities = new List<string>();
+            var cities = new List<string>() { "Brisbane" };
             Api.HomeController homeController = new Api.HomeController(weatherData.Object);
             weatherData.Setup(x => x.GetCitiesData(cityName)).Returns(cities);
 

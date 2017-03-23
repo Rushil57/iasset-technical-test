@@ -28,7 +28,6 @@ E:\iasset technical test\iasset technical test.Tests\bin\Debug\Microsoft.Owin.dl
 E:\iasset technical test\iasset technical test.Tests\bin\Debug\System.Web.Optimization.dll
 E:\iasset technical test\iasset technical test.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 E:\iasset technical test\iasset technical test.Tests\bin\Debug\Owin.dll
-E:\iasset technical test\iasset technical test.Tests\bin\Debug\System.Web.Http.dll
 E:\iasset technical test\iasset technical test.Tests\bin\Debug\System.Web.Http.WebHost.dll
 E:\iasset technical test\iasset technical test.Tests\bin\Debug\System.Net.Http.Formatting.dll
 E:\iasset technical test\iasset technical test.Tests\bin\Debug\iasset technical test.pdb
@@ -48,3 +47,13 @@ E:\iasset technical test\iasset technical test.Tests\bin\Debug\System.Net.Http.F
 E:\iasset technical test\iasset technical test.Tests\obj\Debug\iasset technical test.Tests.csprojResolveAssemblyReference.cache
 E:\iasset technical test\iasset technical test.Tests\obj\Debug\iasset technical test.Tests.dll
 E:\iasset technical test\iasset technical test.Tests\obj\Debug\iasset technical test.Tests.pdb
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Castle.Core.dll
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Moq.dll
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\WebActivatorEx.dll
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Ninject.Web.Common.dll
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Ninject.dll
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Ninject.WebApi.DependencyResolver.dll
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Castle.Core.xml
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Moq.xml
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Ninject.Web.Common.xml
+E:\iasset technical test\iasset technical test.Tests\bin\Debug\Ninject.xml

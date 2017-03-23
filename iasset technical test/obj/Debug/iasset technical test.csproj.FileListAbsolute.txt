@@ -86,3 +86,9 @@ E:\iasset technical test\iasset technical test\bin\Microsoft.Owin.Security.Micro
 E:\iasset technical test\iasset technical test\obj\Debug\iasset technical test.csprojResolveAssemblyReference.cache
 E:\iasset technical test\iasset technical test\obj\Debug\iasset technical test.dll
 E:\iasset technical test\iasset technical test\obj\Debug\iasset technical test.pdb
+E:\iasset technical test\iasset technical test\bin\Ninject.dll
+E:\iasset technical test\iasset technical test\bin\Ninject.Web.Common.dll
+E:\iasset technical test\iasset technical test\bin\Ninject.WebApi.DependencyResolver.dll
+E:\iasset technical test\iasset technical test\bin\WebActivatorEx.dll
+E:\iasset technical test\iasset technical test\bin\Ninject.xml
+E:\iasset technical test\iasset technical test\bin\Ninject.Web.Common.xml

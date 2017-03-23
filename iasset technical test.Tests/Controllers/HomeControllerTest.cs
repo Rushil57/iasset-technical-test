@@ -24,12 +24,5 @@ namespace iasset_technical_test.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
-        [TestMethod]
-        public void GetCities()
-        {
-            var controller = new HomeController();
-            var result = controller.GetCities("Australia") as JsonResult;
-            Assert.IsNotNull(result);
-        }
     }
 }
